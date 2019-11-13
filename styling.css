@@ -1,0 +1,33 @@
+.Container{
+    display:grid;
+    grid-template-areas:"head head"
+                         "sidebar mainContent";
+    }
+
+    .Container>.sides{
+        grid-area: sidebar;
+        background-color: grey;
+        width:95px;
+    }
+    .Container>.Top{
+        color: white;
+        background-color: black;
+        display:flex;
+          grid-area:head;
+        }
+        .Container>.Main{
+            grid-area: mainContent;
+            display:flex;
+            flex-direction: column;
+        }
+        div.Area1{
+            display:flex;
+            flex-direction: column;
+        }
+        button{
+            color:white;
+            background-color: blue;
+        }
+        label{
+            font-weight: bold;
+        }
