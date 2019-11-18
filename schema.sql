@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS ProjectFinal;
+CREATE DATABASE ProjectFinal;
+USE ProjectFinal;
+--Add Auto Increment for ID/Primary Key--
 CREATE TABLE  Users(
  id INT  NOT NULL PRIMARY KEY, 
  firstname VARCHAR(32) DEFAULT NULL, 
@@ -20,4 +24,8 @@ id INT  NOT NULL PRIMARY KEY,
  
 );
 INSERT INTO Users(id, firstname,lastname,password,email,date_joined)
-VALUES(2,"Ashley","Goldberg","password123","admin@bugme.com");
+VALUES(1,"Ashley","Goldberg",password("password123"),"admin@bugme.com");
+INSERT INTO Users(id, firstname,lastname,password,email,date_joined)
+VALUES(2,"Luke","Reynolds",password("Storminh23"),"Luke21@gmail.com");
+INSERT INTO Users(id, firstname,lastname,password,email,date_joined)
+VALUES(3,"Dennis","RiechBach",password("Starr3yNight"),"admin@bugme.com");
