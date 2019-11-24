@@ -8,7 +8,7 @@ $username = 'lab7_user';
 $password = 'Info2180-7';
 $dbname = 'ProjectFinal';
     $conn=new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-    $checkLoginQuery = "SELECT `id`, `firstname`, `lastname`,'' FROM `Users` WHERE `username`='$username";
+    $checkLoginQuery = "SELECT `id`, `firstname`, `lastname`,'email' FROM `Users` WHERE `email`='$username";
     $stmt = $conn->query($checkLoginQuery);
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     if ($result)
