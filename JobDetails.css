@@ -1,0 +1,61 @@
+.Container{
+    display:grid;
+    grid-template-areas:"head head" 
+    "sidebar mainContent" 
+}
+    
+.Container>.sides{
+    grid-area: sidebar;
+    background-color: grey;
+    width:150px;
+        
+}
+    
+    
+.Container>.Top{
+    color: white;
+   background-color: black;
+   display:flex;
+   grid-area:head;
+}
+    
+    
+.Container>.Main{
+    grid-area: mainContent;
+    display:flex;
+    flex-direction: column;
+    padding-left:20px;
+}
+    
+    
+#sidebox{
+    border: 2px solid grey;
+    padding:10px;
+    list-style: none;
+    
+}
+  
+  #sidebox li{
+    margin-bottom: 15px;
+  }
+  
+  
+ .btn{
+    display:block;
+}
+
+#rightSide{
+    padding-left: 20px;
+}
+  
+  
+#flex{
+      display: flex;
+      flex-direction:row;
+}
+  
+#JobDetails{
+      width:70%;
+}
+    
+        

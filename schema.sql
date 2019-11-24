@@ -3,7 +3,7 @@ CREATE DATABASE ProjectFinal;
 USE ProjectFinal;
 --Add Auto Increment for ID/Primary Key--
 CREATE TABLE  Users(
- id INT  NOT NULL PRIMARY KEY, 
+ id INT  NOT NULL PRIMARY KEY,
  firstname VARCHAR(32) DEFAULT NULL, 
   lastname VARCHAR(32) DEFAULT NULL,
  password VARCHAR(16) DEFAULT NULL,
@@ -20,12 +20,14 @@ id INT  NOT NULL PRIMARY KEY,
   assigned_to VARCHAR(32) DEFAULT NULL,
  created_by VARCHAR(32) DEFAULT NULL,
   created VARCHAR(32) DEFAULT NULL,
- updated VARCHAR(32) DEFAULT NULL,
+ updated VARCHAR(32) DEFAULT NULL
  
 );
 INSERT INTO Users(id, firstname,lastname,password,email,date_joined)
-VALUES(1,"Ashley","Goldberg",password("password123"),"admin@bugme.com");
+VALUES(1,"Ashley","Goldberg","password123","admin@bugme.com");
 INSERT INTO Users(id, firstname,lastname,password,email,date_joined)
-VALUES(2,"Luke","Reynolds",password("Storminh23"),"Luke21@gmail.com");
+VALUES(2,"Luke","Reynolds","Storminh23","Luke21@gmail.com");
 INSERT INTO Users(id, firstname,lastname,password,email,date_joined)
-VALUES(3,"Dennis","RiechBach",password("Starr3yNight"),"admin@bugme.com");
+VALUES(3,"Dennis","RiechBach","Starr3yNight","admin@bugme.com");
+INSERT INTO Issue(id,title,description,type,priority,status,assigned_to,created_by,created,updated)
+VALUES(1,"My First Problem"," ","bug",1,"open","BJjOHNSON","LukeReynolds","2013-12-11"," ");
