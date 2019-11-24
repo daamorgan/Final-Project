@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Home</title>
+			<script src="homepage.js"> </script>
+			<link rel="stylesheet" href="styling.css">
+		</head>
+		<body> 
+			<div class="Container">
+     			<div class="Top">
+      				<p>BugMe Issue Tracker</p>
+     			</div>
+     		<div class="sides">
+     			<ul>
+         			<li> <a href="homepage.html"> Home </a> </li>
+             		<br>
+             		<li> <a href="adminLogin.html"> Add User</a></li>
+             		<br>
+             		<li> <a href="CreateIssue.html"> NewIssue</a></li>
+             		<br>
+             		<li> <a href="Logout.html"> Logout</a></li>
+             	</ul>
+
+     </div>
+     <div class="Main">
+     	<div class="Homepage-Flex">
+     		<h1>Issues</h1>
+     		<button class="green" id=newIssue> Create New Issue</button><!--green class is it needed-->
+     		</div>
+     	<form>
+     		Filter by:
+     		<button class= "filterbtn" id="all">All</button>
+     		<button class= "filterbtn" id="open">Open</button>
+     		<button class= "filterbtn" id="mytickets"> My Tickets</button>
+     	</form>
+     	<div id="resultsTable">
+     	</div> 
+     	</div>
+     	
+
+
+	</html>

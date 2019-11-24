@@ -32,4 +32,41 @@
     label{
             font-weight: bold;
     }
-        
+    
+    a{
+        text-decoration: none;
+        color: black;
+    }
+/*CSS HOME*/
+.filterbtn{
+	background-color: white;
+	color: black;
+}
+
+.filterbtn.selected{
+	background-color: blue;
+	colour: white
+}
+
+.red{
+	background-color: red;
+}
+
+.green{
+	background-color: green;
+}
+
+.yellow{
+	background-color: green;
+}
+
+.white{
+	colour: white
+}
+
+.Homepage-Flex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+/*CSS HOME*/
