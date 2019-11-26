@@ -23,10 +23,10 @@ $dbname = 'ProjectFinal';
     }
 }
 if(verifyMe($user,$pass)&& $user=="admin@bugme.com"){
-    header("Location:localhost:8080/Issue.php?Admin=true");
+    header("Location:localhost:8080/homepage.php?Admin=true");
 }
 elseif(verifyMe($user,$pass)&& $user!="admin@bugme.com"){
-    header("Location:localhost:8080/Issue.php?Admin=false");
+    header("Location:localhost:8080/homepage.php?Admin=false");
 }
 else{
     echo "Attempt has failed please try again";
