@@ -4,8 +4,8 @@ $user=$_GET['user'];
 $pass=$_GET['password'];
 function verifyMe($name,$password){
 $host = getenv('IP');
-$username = 'lab7_user';
-$password = 'Info2180-7';
+$username = 'admin';
+$password = 'Bugme123';
 $dbname = 'ProjectFinal';
     $conn=new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
     $checkLoginQuery = "SELECT `id`, `firstname`, `lastname`,'email' FROM `Users` WHERE `email`='$username";
