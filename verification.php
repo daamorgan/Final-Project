@@ -2,7 +2,7 @@
 session_start();
 $user=$_GET['user'];
 $pass=$_GET['password'];
-function verifyMe($name,$password){
+function verifyMe($name,$pass){
 $host = getenv('IP');
 $username = 'admin';
 $password = 'Bugme123';
