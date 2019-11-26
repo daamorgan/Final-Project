@@ -5,10 +5,6 @@ document.addEventListener('DOMContentLoaded', function(){
 }
 );
 
-function EventListener(btn){
-     btn.addEventListener('click',filterAction);
-}
-
 var httpRequest;
 function filterAction(event){
        event.preventDefault();
@@ -18,6 +14,13 @@ function filterAction(event){
        httpRequest.onreadystatechange = fetchData;
        httpRequest.open('GET',url,true);
        httpRequest.send();
+       var selectedOption=document.querySelector(".selected");
+       if (selectedOption != null){
+           selectedOption.classList.remove("selected");
+       }
+       this.classList.add("selected");
+       
+       
  }
 
  function fetchData(){
