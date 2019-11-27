@@ -1,5 +1,4 @@
 DROP DATABASE IF EXISTS ProjectFinal;
-DROP DATABASE IF EXISTS ProjectFinal;
 CREATE DATABASE ProjectFinal;
 USE ProjectFinal;
 CREATE TABLE  Users(
