@@ -23,15 +23,15 @@ CREATE TABLE Issue(
  type VARCHAR(16) DEFAULT NULL,
  priority VARCHAR(32) DEFAULT NULL,
  status VARCHAR(32) DEFAULT NULL,
- assigned_to VARCHAR(32) DEFAULT NULL,
- created_by VARCHAR(32) DEFAULT NULL,
+ assigned_to INT  NOT NULL,
+ created_by INT  NOT NULL,
  created VARCHAR(32) DEFAULT NULL,
  updated VARCHAR(32) DEFAULT NULL,
  PRIMARY KEY(id)
 );
 INSERT INTO Issue(title,description,type,priority,status,assigned_to,created_by,created,updated) VALUES
-("My First Problem","stuff","bug",1,"open","1","2","2013-12-11","2012-03-09"),
-("The Second problem","More Stuff","bug",2,"open","3","1","2013-10-03","2012-03-09"),
-("I cant stop the information from leaking","My Site's security measures are so horrible","bug",5,"closed","4","1","2013-10-03","2012-03-09"),
-("Constant CSRF attacks on my site","We have noticed that ","bug",3,"in progress","3","2","2013-10-03","2012-03-09"),
-("Access to my web application is being restricted","Admins and users alike can't login","Proposal",4,"in progress","4","2","2012-05-06","2010-04-04");
+("My First Problem","stuff","bug",1,"open",1,2,"2013-12-11","2012-03-09"),
+("The Second problem","More Stuff","bug",2,"open",3,1,"2013-10-03","2012-03-09"),
+("I cant stop the information from leaking","My Site's security measures are so horrible","bug",5,"closed",4,1,"2013-10-03","2012-03-09"),
+("Constant CSRF attacks on my site","We have noticed that ","bug",3,"in progress",3,2,"2013-10-03","2012-03-09"),
+("Access to my web application is being restricted","Admins and users alike can't login","Proposal",4,"in progress",4,2,"2012-05-06","2010-04-04");
