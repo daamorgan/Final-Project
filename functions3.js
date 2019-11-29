@@ -1,5 +1,5 @@
 window.onload=function(){
-    var user=this.document.getElementById("UserName").Value;
+    var user=this.document.getElementById("UserName").value;
     var pass=this.document.getElementById("Password").value;
     this.document.getElementById("click").onclick=function(){
     if( (user==""&&pass=="")||(user="" || pass=="")){
