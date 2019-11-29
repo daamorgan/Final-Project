@@ -8,8 +8,7 @@ window.onload=function(){
     function doSomething() { 
         if (xhr.readyState === XMLHttpRequest.DONE) { 
             if (xhr.status === 200) { 
-                var response = xhr.responseText; 
-                 document.getElementById("result").innerHTML=response.trim(); 
+                var response = xhr.responseText;
             }  else{
                 alert('There was a problem with the request.'); 
     
