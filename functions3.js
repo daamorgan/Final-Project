@@ -1,6 +1,6 @@
 window.onload=function(){
     var user=this.document.getElementById("UserName").Value;
-    var pass=this.document.getElementById("Pasword").value;
+    var pass=this.document.getElementById("Password").value;
     this.document.getElementById("click").onclick=function(){
     if( (user==""&&pass=="")||(user="" || pass=="")){
         this.alert("Please Enter the correct information");
