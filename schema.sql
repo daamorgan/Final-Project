@@ -28,7 +28,7 @@ CREATE TABLE Issue(
  updated VARCHAR(32) DEFAULT NULL
 );
 INSERT INTO Issue(id,title,description,type,priority,status,assigned_to,created_by,created,updated) VALUES
-(1,"My First Problem","stuff","bug",1,"open","BJjOHNSON","LukeReynolds","2013-12-11","2012-03-09"),
-(2,"The Second problem","More Stuff","bug",2,"open","Nelson","Raymond","2013-10-03","2012-03-09"),
-(3,"I cant stop the information from leaking","My Site's security measures are so horrible","bug",5,"closed","David","Lewis Dreadfield","2013-10-03","2012-03-09"),
-(4,"Constant CSRF attacks on my site","We have noticed that ","bug",3,"in pogress","Nelson","Raymond","2013-10-03","2012-03-09");
+(1,"My First Problem","stuff","bug",1,"open","1","2","2013-12-11","2012-03-09"),
+(2,"The Second problem","More Stuff","bug",2,"open","3","1","2013-10-03","2012-03-09"),
+(3,"I cant stop the information from leaking","My Site's security measures are so horrible","bug",5,"closed","4","1","2013-10-03","2012-03-09"),
+(4,"Constant CSRF attacks on my site","We have noticed that ","bug",3,"in pogress","3","2","2013-10-03","2012-03-09");
