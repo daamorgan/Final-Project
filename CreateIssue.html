@@ -11,24 +11,25 @@
     <div class="Container">
      
      <div class="Top">
-       <p href="#bug" class="fa fa-bug">BugMe Issue Tracker</p>
+       <h3> <i class="fa fa-bug" id="bugIcon"></i>BugMe Issue Tracker</h3>
      </div>
      
      <div class="sides">
         <ul>
-          <li href="#home" class="fa fa-fw fa-home"> <a href="homepage.html"> Home </a></li>
-          <br>
-          <li href="#plus" class="fa fa-fw fa-plus"> <a href="adminLogin.html"> Add User</a></li>
-          <br>
-          <li href="#plus" class="fa fa-fw fa-plus"> <a href="CreateIssue.html"> NewIssue</a></li>
-          <br>
-          <li href="#power-off" class="fa fa-power-off"> <a href="Logout.php"> Logout</a></li>
+            <li> <a href="homepage.html"><i class="fa fa-fw fa-home"></i>Home </a></li>
+            <br>
+            <li> <a href="adminLogin.html"><i class="fa fa-fw fa-plus"></i>Add User</a></li>
+            <br>
+            <li> <a href="CreateIssue.html"><i class="fa fa-fw fa-plus"></i>New Issue</a></li>
+            <br>
+            <li> <a href="Logout.php"> <i class="fa fa-power-off" id="powericon"></i>  Logout</a></li>
         </ul>
      </div>
      
      <div class="Main">
          <h1>Create Issue</h1>
          <br>
+         
          <form action="IssueHandler.php" method="POST">
         <label for="Title">Title</label>
         <input type="text" required>
