@@ -1,6 +1,5 @@
 <?php
 $the_day= Date('Y-m-d');
-var_dump($the_day);
 $host = getenv('IP');
 $username = 'admin';
 $password = 'Bugme123';
