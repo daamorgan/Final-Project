@@ -4,41 +4,42 @@
         <link rel="stylesheet"type="text/css" href="styling.css">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
          <title> Create New User </title>
+         <script src="functions2.js"></script>
+         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     </head>
-    <script src="functions2.js"></script>
+    
     <div class="Container">
      <div class="Top">
-      <p href="#bug" class="fa fa-bug">BugMe Issue Tracker</p>
+      <h3> <i class="fa fa-bug" id="bugIcon"></i>BugMe Issue Tracker</h3>
      </div>
      
      <div class="sides">
          <ul>
-           <li href="#home" class="fa fa-fw fa-home"> <a href="homepage.html"> Home </a></li>
-          <br>
-          <li href="#plus" class="fa fa-fw fa-plus"> <a href="adminLogin.html"> Add User</a></li>
-          <br>
-          <li href="#plus" class="fa fa-fw fa-plus"> <a href="CreateIssue.html"> NewIssue</a></li>
-          <br>
-          <li href="#power-off" class="fa fa-power-off"> <a href="Logout.php"> Logout</a></li>
-        
-         </ul>
+            <li> <a href="homepage.html"><i class="fa fa-fw fa-home"></i>Home </a></li>
+            <br>
+            <li> <a href="adminLogin.html"><i class="fa fa-fw fa-plus"></i>Add User</a></li>
+            <br>
+            <li> <a href="CreateIssue.html"><i class="fa fa-fw fa-plus"></i>New Issue</a></li>
+            <br>
+            <li> <a href="Logout.php"> <i class="fa fa-power-off" id="powericon"></i>  Logout</a></li>
+        </ul>
      </div>
      <div class="Main">
          <h1>NEW USER</h1>
          <div class="Area1">
                         <label for="Firstname">Firstname</label>
-                        <input type="text" id="Firstname"></div>
+                        <input type="text" id="Firstname" required></div>
                         <br>
                         <div class="Area1"><label for="Lastname">Lastname</label>
-                        <input type="text" id="Lastname"></div>
+                        <input type="text" id="Lastname" required></div>
                         <br>
                         <div class="Area1"><label for="Password">Password</label>
-                        <input type="text" id="Password" minlength="8"></div>
+                        <input type="password" id="Password" minlength="8" required></div>
                        <br>
                         <div class="Area1"><label for="Email">Email</label>
-                        <input type="text" id="Email"></div>
+                        <input type="email" id="Email" required></div>
                         <br>
- <button id="clicking">Submit</button>
+ <button type="search" id="clicking">Submit</button>
      </div>
     </div>
 </html>
