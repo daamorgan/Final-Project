@@ -1,7 +1,7 @@
 window.onload=function(){
     this.document.getElementById("click").onclick=function(){
     var xhr=new XMLHttpRequest();
-    var url = "http://localhost:8080/issue.php"
+    var url = "http://localhost:8080/IssueHandler.php"
     xhr.onreadystatechange = doSomething; 
     xhr.open('GET', url); 
     xhr.send();
