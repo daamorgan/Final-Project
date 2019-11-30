@@ -31,7 +31,7 @@ $dbname = 'ProjectFinal';
             <br>
             <li> <a href="adminLogin.html"><i class="fa fa-fw fa-plus"></i>Add User</a></li>
             <br>
-            <li> <a href="CreateIssue.html"><i class="fa fa-fw fa-plus"></i>New Issue</a></li>
+            <li> <a href="CreateIssue.php"><i class="fa fa-fw fa-plus"></i>New Issue</a></li>
             <br>
             <li> <a href="Logout.php"> <i class="fa fa-power-off" id="powericon"></i>  Logout</a></li>
         </ul>
