@@ -13,7 +13,7 @@ $username = 'admin';
 $password = 'Bugme123';
 $dbname = 'ProjectFinal';
     $conn=new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-    $checkLoginQuery = "INSERT INTO Issue(id,title,description,type,priority,status,assigned_to,created_by,created,updated)
-    VALUES(1,$text,$description,$Type,$Priority,open,$Assigned,$currentuser,$complete_time,$complete_time);";
+    $checkLoginQuery = "INSERT INTO Issue(title,description,type,priority,status,assigned_to,created_by,created,updated)
+    VALUES($text,$description,$Type,$Priority,open,$Assigned,$currentuser,$complete_time,$complete_time);";
     $stmt = $conn->query($checkLoginQuery);
 ?>
