@@ -1,6 +1,6 @@
 .Container{
     display:grid;
-    grid-template-areas:"head head" 
+    grid-template-areas:"head head " 
     "sidebar mainContent" 
 }
     
@@ -8,9 +8,37 @@
     grid-area: sidebar;
     background-color: grey;
     width:150px;
-        
+    height:655px;
 }
-    
+   
+.sides ul{
+    list-style: none;
+    padding:10px;
+    margin:10px;
+}   
+
+
+
+i{
+    padding: 5px;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+#bugIcon{
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+
+#powericon{
+    padding-left: 9px;
+}
     
 .Container>.Top{
     color: white;
@@ -21,31 +49,46 @@
     
     
 .Container>.Main{
-    grid-area: mainContent;
-    display:flex;
-    flex-direction: column;
-    padding-left:20px;
+    grid-area:mainContent;
+    margin-right: 0px;
+    padding-right: 0px;
+    width:900px;
+    margin-left:-200px;
+    padding-left:0px;
+
 }
     
+ 
     
 #sidebox{
-    border: 2px solid grey;
+    border: 2px solid #DEDEDE;
     padding:10px;
     list-style: none;
-    
+    width:150px;
+    background-color: #ECECEC;
+    border-radius:5px;
+
 }
   
   #sidebox li{
     margin-bottom: 15px;
   }
   
+  #sidebox span{
+      font-weight: bolder;
+  }
+  
   
  .btn{
     display:block;
+    width:170px;
+    padding:9px;
+    border-radius:5px;
+
 }
 
 #rightSide{
-    padding-left: 20px;
+    padding-left: 150px;
 }
   
   
@@ -53,9 +96,25 @@
       display: flex;
       flex-direction:row;
 }
+
+
+#description{
+    display: block;
+    width:800px;
+}
+
   
 #JobDetails{
       width:70%;
 }
+
     
+#closed{
+    background-color: #1E90FF;
+}
+
         
+#progress{
+    background-color: #02b875;
+}    
+
