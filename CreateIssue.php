@@ -7,7 +7,6 @@ $dbname = 'ProjectFinal';
     $checkLoginQuery = "SELECT `firstname`, `lastname` FROM `Users`";
     $stmt = $conn->query($checkLoginQuery);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo $result['username'];
 ?>
 <!DOCTYPE html>
 <html>
