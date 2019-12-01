@@ -11,7 +11,7 @@ CREATE TABLE  Users(
  PRIMARY KEY(id)
 );
 INSERT INTO Users(firstname,lastname,password,email,date_joined)VALUES
-("Ashley","Goldberg","password123","admin@bugme.com","2017-08-19"),
+("Ashley","Goldberg","Password123","admin@bugme.com","2017-08-19"),
 ("Luke","Reynolds","Storminh23","Luke21@gmail.com","2015-11-13"),
 ("Dennis","RiechBach","Starr3yNight","duncebat@bugs.com","2013-12-12"),
 ("Lucy","Henry","Huntings12","mastermind@shutin.com","2016-07-07");
