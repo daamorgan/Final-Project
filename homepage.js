@@ -1,18 +1,21 @@
 document.addEventListener('DOMContentLoaded', function(){
-	document.querySelectorAll("a").href+=location.search;
-	document.getElementById("open").addEventListener('click',filterAction);
+   windowAction();
+    document.getElementById("open").addEventListener('click',filterAction);
 	document.getElementById("all").addEventListener('click',filterAction);
 	document.getElementById("mytickets").addEventListener('click',filterAction);
+    document.getElementById("newIssue").addEventListener('click',()=>{
+	window.location.href="CreateIssue.php";
+	});
+	
 }
 );
 
-var httpRequest;
+var httpRequest=new XMLHttpRequest();
 function filterAction(event){
-       event.preventDefault();
-       httpRequest = new XMLHttpRequest();
-       var filteroption= this.id;
+        event.preventDefault();
+        filteroption=this.id;
        var url ="homepage.php?filter="+ filteroption;
-       httpRequest.onreadystatechange = fetchData;
+       httpRequest.onreadystatechange = fetchData();
        httpRequest.open('GET',url,true);
        httpRequest.send();
        var selectedOption=document.querySelector(".selected");
@@ -23,11 +26,58 @@ function filterAction(event){
        
        
  }
+function windowAction(){
+       filteroption="startup";
+       var url ="homepage.php?filter="+ "startup";
+       httpRequest.onreadystatechange = fetchData;
+       httpRequest.open('GET',url,true);
+       httpRequest.send();
+       var selectedOption=document.querySelector(".selected");
+       if (selectedOption != null){
+           selectedOption.classList.remove("selected");
+       }
+       document.getElementById("all").classList.add("selected");
+    
+}
 
  function fetchData(){
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
         if (httpRequest.status === 200) {
-            document.getElementById('resultsTable').innerHTML= httpRequest.responseText;
+            console.log(["startup", "all", "open", "mytickets"].includes(filteroption));
+            if (["startup", "all", "open", "mytickets"].includes(filteroption)){
+                document.getElementById('resultsTable').innerHTML= httpRequest.responseText;
+                job();
+            }
+        }else {
+            alert('There was a problem with the request.');
+}}}
+
+ 
+function job(){
+    var content=document.getElementsByClassName("issueTitle");
+    let issues=Array.from(content);
+    issues.forEach(makeListeners);
+        
+}
+
+function makeListeners(element){
+    element.addEventListener("click", infoAction);
+}
+
+
+
+function fetching(){
+    if (httpRequest.readyState === XMLHttpRequest.DONE) {
+        if (httpRequest.status === 200) {
+          
    }else {
      alert('There was a problem with the request.');
 }}}
+
+function infoAction(event){
+        var id=this.id;
+        var url ="homepage.php?filter="+ id;
+        httpRequest.onreadystatechange = fetching;
+       httpRequest.open('GET',url);
+       httpRequest.send();
+}
