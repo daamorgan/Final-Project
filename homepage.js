@@ -27,7 +27,6 @@ function filterAction(event){
        
  }
 function windowAction(){
-       filteroption="startup";
        var url ="homepage.php?filter="+ "startup";
        httpRequest.onreadystatechange = fetchData;
        httpRequest.open('GET',url,true);
