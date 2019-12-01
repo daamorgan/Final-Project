@@ -24,10 +24,10 @@ $dbname = 'ProjectFinal';
 }
 if(verifyMe($user,$pass)&& $user=="admin@bugme.com"){
     echo"You have been properly verified";
-    header("Location:localhost:8080/homepage.php?username="+$user+"&Admin=true");
+    header("Location:localhost:8080/homepage.html?username="+$user+"&Admin=true");
 }
 elseif(verifyMe($user,$pass)&& $user!="admin@bugme.com"){
-    header("Location:localhost:8080/homepage.php?username="+$user+"&Admin=false");
+    header("Location:localhost:8080/homepage.?username="+$user+"&Admin=false");
 }
 else{
     echo "Attempt has failed please try again";
