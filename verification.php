@@ -8,7 +8,7 @@ $username = 'admin';
 $password = 'Bugme123';
 $dbname = 'ProjectFinal';
     $conn=new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-    $checkLoginQuery = "SELECT `id`, `firstname`, `lastname`,'email' FROM `Users` WHERE `email`='$username";
+    $checkLoginQuery = "SELECT `id`, `firstname`, `lastname`,'email' FROM `Users` WHERE `email`='$user";
     $stmt = $conn->query($checkLoginQuery);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     if ($result)
@@ -23,8 +23,8 @@ $dbname = 'ProjectFinal';
     }
 }
 if(verifyMe($user,$pass)&& $user=="admin@bugme.com"){
-    echo"You have been properly verified";
     header("Location:localhost:8080/homepage.html?username="+$user+"&Admin=true");
+    echo"You have been properly verified";
 }
 elseif(verifyMe($user,$pass)&& $user!="admin@bugme.com"){
     header("Location:localhost:8080/homepage.html?username="+$user+"&Admin=false");
