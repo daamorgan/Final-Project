@@ -52,7 +52,7 @@ $dbname = 'ProjectFinal';
         <label for="Assigned To">Assigned To</label>
         <select id = "Assigned to" required>
          <?php foreach($result as $row):?>
-         <option><?=$row['firstname'].$row['lastname']?></option>
+         <option><?=$row['firstname']." ".$row['lastname']?></option>
           <?php endforeach;?>         
         </select>
        <br>
