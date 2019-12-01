@@ -23,37 +23,6 @@
         margin-left: -475px;
 }
 
-.Area1{
-        display:flex;
-        flex-direction: column;
-        align-items:center;
-        width:75%;
-        margin:100px 200px 0px 200px;
-        
-}
-.Center{
-text-align: center;
-} 
-
-#LoginTitle{
-    padding-bottom: 40px;
-    
-}
-#ProgramName{
-    font-size: 30px;
-}
-.loginbtn{
-    width:100px;
-}
-.loginInput{
-    width:400px;
-    font-size: 20px;
-}
-.loginLabel{
-    font-size: 20px; 
-}
-
-
 button{
         color:white;
         background-color: blue;
@@ -89,6 +58,40 @@ padding: 5px;
 
 
 
+/* Css for the LoginPage*/
+
+.Area1{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        width:75%;
+        margin:100px 200px 0px 200px;
+        
+}
+.Center{
+text-align: center;
+} 
+
+#LoginTitle{
+    padding-bottom: 40px;
+    
+}
+#ProgramName{
+    font-size: 30px;
+}
+.loginbtn{
+    width:100px;
+}
+.loginInput{
+    width:400px;
+    font-size: 20px;
+}
+.loginLabel{
+    font-size: 20px; 
+}
+
+
+
 /*CSS for HOMEPAGE*/
 .filterbtn{
 	background-color: white;
@@ -116,7 +119,7 @@ padding: 5px;
 }
 
 .yellow{
-	background-color: gold;/*Newly Added*/
+	background-color: gold;
 	padding:5px;
 	border-radius:5px;
 }
@@ -148,11 +151,13 @@ td{
  padding: 5px 30px 5px 30px;   
 }
 
+
 table{
     padding-top: 60px;
     width: 100%;
-    text-align: center;/*NEWLY ADDED*/
+    text-align: center;
 }
+
 #newIssue{
     margin-top: 50px;
     height:40px;
