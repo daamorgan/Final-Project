@@ -1,7 +1,7 @@
 <?php
 session_start();
-$user=$_GET['user'];
-$pass=$_GET['password'];
+$user=filter_input(INPUT_GET,'user',FILTER_SANITIZE_SPECIAL_CHARS);
+$pass=filter_input(INPUT_GET,'password',FILTER_SANITIZE_SPECIAL_CHARS);
 function verifyMe($name,$pass){
 $host = getenv('IP');
 $username = 'admin';
