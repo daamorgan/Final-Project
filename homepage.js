@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
 var httpRequest=new XMLHttpRequest();
 function filterAction(event){
-        event.preventDefault();
-        filteroption=this.id;
+       event.preventDefault();
+       var filteroption=this.id;
        var url ="homepage.php?filter="+ filteroption;
        httpRequest.onreadystatechange = fetchData();
        httpRequest.open('GET',url,true);
@@ -43,11 +43,8 @@ function windowAction(){
  function fetchData(){
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
         if (httpRequest.status === 200) {
-            console.log(["startup", "all", "open", "mytickets"].includes(filteroption));
-            if (["startup", "all", "open", "mytickets"].includes(filteroption)){
-                document.getElementById('resultsTable').innerHTML= httpRequest.responseText;
-                job();
-            }
+              document.getElementById('resultsTable').innerHTML= httpRequest.responseText;
+              job();
         }else {
             alert('There was a problem with the request.');
 }}}
