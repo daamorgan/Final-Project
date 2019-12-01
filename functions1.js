@@ -1,4 +1,5 @@
 window.onload=function(){
+    document.querySelectorAll("a").href+=location.search;
     this.document.getElementById("click").onclick=function(){
     var xhr=new XMLHttpRequest();
     var url = "http://localhost:8080/IssueHandler.php"
