@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function(){
    windowAction();
-    document.getElementById("open").addEventListener('click',filterAction);
-	document.getElementById("all").addEventListener('click',filterAction);
-	document.getElementById("mytickets").addEventListener('click',filterAction);
-    document.getElementById("newIssue").addEventListener('click',()=>{
-	window.location.href="CreateIssue.php";
+   document.getElementById("open").addEventListener('click',filterAction);
+   document.getElementById("all").addEventListener('click',filterAction);
+   document.getElementById("mytickets").addEventListener('click',filterAction);
+   document.getElementById("newIssue").addEventListener('click',()=>{
+   window.location.href="CreateIssue.php";
 	});
 	
 }
