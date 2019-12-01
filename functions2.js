@@ -1,5 +1,5 @@
 window.onload=function(){
-
+document.querySelectorAll("a").href+=location.search;
     this.document.getElementById("clicking").onclick=function(){
         var Firstname=document.getElementById("Firstname").value;
         var Lastname=document.getElementById("Lastname").value;
