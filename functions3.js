@@ -1,4 +1,5 @@
 window.onload=function(){
+    document.querySelectorAll("a").href+=location.search;
     var user=this.document.getElementById("UserName").value;
     var pass=this.document.getElementById("Password").value;
     this.document.getElementById("click").onclick=function(){
