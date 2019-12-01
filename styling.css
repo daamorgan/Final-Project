@@ -3,41 +3,93 @@
     grid-template-areas:"head head"
                          "sidebar mainContent";
     }
-    .Container>.sides{
-        grid-area: sidebar;
-        background-color: grey;
-        width:150px;
-    }
-    .Container>.Top{
-        color: white;
-        background-color: black;
+.Container>.sides{
+    grid-area: sidebar;
+    background-color: grey;
+    width:150px;
+    height:655px;
+}
+.Container>.Top,#loginPage{
+    color: white;
+    background-color: black;
+    display:flex;
+    grid-area:head;
+}
+.Container>.Main{
+        grid-area: mainContent;
         display:flex;
-          grid-area:head;
-    }
-    .Container>.Main{
-            grid-area: mainContent;
-            display:flex;
-            flex-direction: column;
-            width:500px;
-            margin-left: -475px;
-    }
-    div.Area1{
-            display:flex;
-            flex-direction: column;
-    }
-    button{
-            color:white;
-            background-color: blue;
-    }
-    label{
-            font-weight: bold;
-    }
+        flex-direction: column;
+        width:500px;
+        margin-left: -475px;
+}
+
+.Area1{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        width:75%;
+        margin:100px 200px 0px 200px;
+        
+}
+.Center{
+text-align: center;
+} 
+
+#LoginTitle{
+    padding-bottom: 40px;
     
-    a{
-        text-decoration: none;
-        color: black;
-    }
-/*CSS HOME*/
+}
+#ProgramName{
+    font-size: 30px;
+}
+.loginbtn{
+    width:100px;
+}
+.loginInput{
+    width:400px;
+    font-size: 20px;
+}
+.loginLabel{
+    font-size: 20px; 
+}
+
+
+button{
+        color:white;
+        background-color: blue;
+}
+label{
+        font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    list-style:none;
+    padding:10px;
+    margin:10px;
+}
+
+i{
+padding: 5px;
+}
+
+#powericon{
+    padding-left: 9px;
+    
+}
+
+#bugIcon{
+    padding-left:30px;
+    padding-right:20px;
+}
+
+
+
+/*CSS for HOMEPAGE*/
 .filterbtn{
 	background-color: white;
 	color: black;
@@ -45,7 +97,7 @@
 
 .filterbtn.selected{
 	background-color: #1E90FF;
-	colour: white;
+	color: white;
 }
 
 .red{
@@ -60,15 +112,16 @@
 	color: white;
 	padding:5px;
 	border-radius:5px;
+	width:45px;
 }
 
 .yellow{
-	background-color: green;
+	background-color: gold;/*Newly Added*/
 	padding:5px;
 	border-radius:5px;
 }
 
-.blueTitle{
+.issueTitle{
     color: #1E90FF;
 }
 
@@ -78,6 +131,13 @@
 	justify-content: space-between;
 }
 
+#Homepage_Main{
+    margin-right: 0px;
+    padding-right: 0px;
+    width:900px;
+    margin-left:-90px;
+    padding-left: 0px
+}
 
 th{
     padding: 0px 40px 0px 40px;
@@ -89,6 +149,12 @@ td{
 }
 
 table{
-    padding: 60px 0px 0px 0px;
+    padding-top: 60px;
+    width: 100%;
+    text-align: center;/*NEWLY ADDED*/
 }
-/*CSS HOME*/
+#newIssue{
+    margin-top: 50px;
+    height:40px;
+    width:100px;
+}
