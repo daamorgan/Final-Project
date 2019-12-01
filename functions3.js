@@ -8,7 +8,7 @@ window.onload=function(){
     }
     else{
             var xhr=new XMLHttpRequest();
-            var url = "http://localhost:8080/verification.php?user="+user+"&password="+pass;
+            var url = "verification.php?user="+user+"&password="+pass;
             xhr.onreadystatechange = changes; 
             xhr.open('GET', url); 
             xhr.send();
