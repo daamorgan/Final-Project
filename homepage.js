@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
+	document.querySelectorAll("a").href+=location.search;
 	document.getElementById("open").addEventListener('click',filterAction);
 	document.getElementById("all").addEventListener('click',filterAction);
 	document.getElementById("mytickets").addEventListener('click',filterAction);
