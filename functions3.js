@@ -1,10 +1,9 @@
 window.onload=function(){
-    document.querySelectorAll("a").href+=location.search;
-    var user=this.document.getElementById("UserName").value;
-    var pass=this.document.getElementById("Password").value;
-    this.document.getElementById("click").onclick=function(){
+    document.getElementById("click").onclick=function(){
+    var user=document.getElementById("UserName").value;
+    var pass=document.getElementById("Password").value;
     if( (user==""&&pass=="")||(user="" || pass=="")){
-        this.alert("Please Enter the correct information");
+        alert("Please Enter the correct information");
     }
     else{
             var xhr=new XMLHttpRequest();
@@ -16,7 +15,9 @@ window.onload=function(){
                 if (xhr.readyState === XMLHttpRequest.DONE) { 
                     if (xhr.status === 200) { 
                         var response = xhr.responseText; 
-                        console.log(response);
+                        if(response==true){
+                        location.href="homepage.html";
+                        }
                     }  else{
                         alert('There was a problem with the request.'); 
             
