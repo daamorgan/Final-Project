@@ -1,4 +1,5 @@
 <?php 
+ 
 $host = getenv('IP');
 $username = 'admin';
 $password = 'Bugme123';
@@ -13,8 +14,6 @@ $dbname = 'ProjectFinal';
     <head>
         <link rel="stylesheet" type="text/css" href="styling.css">
         <title> Create New Issue</title>
-        <script src="functions1.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     
@@ -36,21 +35,21 @@ $dbname = 'ProjectFinal';
         </ul>
      </div>
      
-     <div class="Main">
+     <div class="Main" id="mainContent">
          <h1>Create Issue</h1>
          <br>
          
-         <form action="IssueHandler.php" method="POST">
+         <form action="IssueHandler.php" method="POST" >
         <label for="Title">Title</label>
-        <input type="text" required>
+        <input type="text" id="Title" name="Title" required>
          <br>
          
         <label for="Description">Description</label>
-        <textarea rows="4" cols="50" required> </textarea>
+        <textarea name="Description" id="Description" rows="4" cols="50" required> </textarea>
         <br>
         
         <label for="Assigned To">Assigned To</label>
-        <select id = "Assigned to" required>
+        <select name="Assigned To" id = "Assigned To" required>
          <?php foreach($result as $row):?>
          <option><?=$row['firstname']." ".$row['lastname']?></option>
           <?php endforeach;?>         
@@ -58,7 +57,7 @@ $dbname = 'ProjectFinal';
        <br>
         
         <label for="Type">Type</label>
-        <select id = "Type" required>
+        <select name = "Type" id="Type" required>
             <option value = "Bug">Bug</option>
             <option value  = "Proposal">Proposal</option>
             <option value = "Task">Task</option>
@@ -66,13 +65,13 @@ $dbname = 'ProjectFinal';
         <br>
  
         <label for="Priority">Priority</label>
-        <select id = "Priority" required>
+        <select name = "Priority" id="Priority" required>
             <option value = "Major">Major</option>
             <option value  = "Minor">Minor</option>
             <option value = "Critical">Critical</option>
         </select>
         <br>
-        <button id="click">Submit</button>
+        <button type="submit" id="submitBtn" id=name="submitBtn" class="btn">Submit</button>
          </form>
      </div>
   
