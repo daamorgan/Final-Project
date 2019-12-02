@@ -21,8 +21,8 @@ if (!(empty($result)) && password_verify($pass,$result['passowrd'])){
       $_SESSION["lastname"] = $row['lastname'];
        return true;
     }else{
-       return false;
       echo "Invalid username or password";
+       return false;
       
   }
 }
