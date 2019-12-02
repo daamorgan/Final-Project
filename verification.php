@@ -10,7 +10,9 @@ $conn=new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $pas
 $checkLoginQuery = "SELECT id, firstname, lastname, email, password FROM Users WHERE email='$user'";
 $stmt = $conn->query($checkLoginQuery);
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-if (!(empty($result)) && password_verify($pass,$result['passowrd'])){
+if (!empty($result)){
+  foreach($result as $row)
+    if ($pass===$row['password']){
       if ($user==="admin@bugme.com"){
         $_SESSION["admin"]=true;
       }else{
@@ -19,10 +21,11 @@ if (!(empty($result)) && password_verify($pass,$result['passowrd'])){
       $_SESSION["user_id"] = $row['id'];
       $_SESSION["firstname"] = $row['firstname'];
       $_SESSION["lastname"] = $row['lastname'];
-       return true;
-    }else{
-      echo "Invalid username or password";
-       return false;
+      echo "success";
+      exit();
+      
+}else{
+    echo "Invalid username or password";
       
   }
 }
