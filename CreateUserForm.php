@@ -1,5 +1,6 @@
 
   <h1>NEW USER</h1>
+  <div id="content"></div>
     <div class="Area1">
      <label for="Firstname">Firstname</label>
      <input type="text" id="Firstname" required oninvalid="this.setCustomValidity('User ID is a must')">
