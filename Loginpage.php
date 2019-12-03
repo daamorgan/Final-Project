@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
+    <div id="Content">
     <head>
-        <title>LOGIN</title>
         <link rel="stylesheet"type="text/css" href="styling.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="functions3.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     </head>
-    <header id="loginPage">
-        <h3 id="ProgramName"> <i class="fa fa-bug" id="bugIcon"></i>BugMe Issue Tracker</h3>
-    </header>
-    <body>
+    <!--<header id="loginPage">
+    </header>-->
             <div class="Area1">
+                
                 <h1 class="Center" id="LoginTitle">Login</h1>
+                <div id="message"></div>
                 <div>
                     <label class="loginLabel" for="UserName">Username:</label>
                     <input class="loginInput" type="email" id="UserName">
@@ -19,12 +18,12 @@
                 <br>
                 <div>
                     <label class="loginLabel" for="Password">Password:</label>
-                    <input class="loginInput" type="password" id="Password" minlength="8">
+                    <input class="loginInput" type="text" id="Password" minlength="8">
                 </div>
                  <br>
                  <br>
                 <button class="loginbtn" id="click" type="submit">Submit</button>
             </div>
-            
-    </body>
+            <div id=result></div>
+        </div>   
 </html>
