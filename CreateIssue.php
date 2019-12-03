@@ -1,5 +1,4 @@
 <?php 
- 
 $host = getenv('IP');
 $username = 'admin';
 $password = 'Bugme123';
@@ -12,67 +11,47 @@ $dbname = 'ProjectFinal';
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="styling.css">
-        <title> Create New Issue</title>
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <<link rel="stylesheet" type="text/css" href="styling.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     </head>
-    
-    <div class="Container">
-     
-     <div class="Top">
-       <h3> <i class="fa fa-bug" id="bugIcon"></i>BugMe Issue Tracker</h3>
-     </div>
-     
-     <div class="sides">
-        <ul>
-            <li> <a href="homepage.html"><i class="fa fa-fw fa-home"></i>Home </a></li>
-            <br>
-            <li> <a href="adminLogin.html"><i class="fa fa-fw fa-plus"></i>Add User</a></li>
-            <br>
-            <li> <a href="CreateIssue.php"><i class="fa fa-fw fa-plus"></i>New Issue</a></li>
-            <br>
-            <li> <a href="Logout.php"> <i class="fa fa-power-off" id="powericon"></i>  Logout</a></li>
-        </ul>
-     </div>
-     
-     <div class="Main" id="mainContent">
+    <body>
          <h1>Create Issue</h1>
          <br>
          
-         <form action="IssueHandler.php" method="POST" >
-        <label for="Title">Title</label>
-        <input type="text" id="Title" name="Title" required>
+         <form action="IssueHandler.php" method="POST">
+        <label for="Title:">Title</label>
+        <input type="text" required>
          <br>
          
-        <label for="Description">Description</label>
-        <textarea name="Description" id="Description" rows="4" cols="50" required> </textarea>
+        <label for="Description:">Description</label>
+        <textarea rows="4" cols="50" required> </textarea>
         <br>
         
-        <label for="Assigned To">Assigned To</label>
-        <select name="Assigned To" id = "Assigned To" required>
+        <label for="Assigned To:">Assigned To</label>
+        <select id = "Assigned to" required>
          <?php foreach($result as $row):?>
-         <option><?=$row['firstname']." ".$row['lastname']?></option>
+         <option><?=$row['firstname'].$row['lastname']?></option>
           <?php endforeach;?>         
         </select>
        <br>
         
-        <label for="Type">Type</label>
-        <select name = "Type" id="Type" required>
+        <label for="Type:">Type</label>
+        <select id = "Type" required>
             <option value = "Bug">Bug</option>
             <option value  = "Proposal">Proposal</option>
             <option value = "Task">Task</option>
         </select>
         <br>
  
-        <label for="Priority">Priority</label>
-        <select name = "Priority" id="Priority" required>
+        <label for="Priority:">Priority</label>
+        <select id = "Priority" required>
             <option value = "Major">Major</option>
             <option value  = "Minor">Minor</option>
             <option value = "Critical">Critical</option>
         </select>
         <br>
-        <button type="submit" id="submitBtn" id=name="submitBtn" class="btn">Submit</button>
+        <button id="click" type="submit">Submit</button>
          </form>
      </div>
-  
+    </body>
 </html>
